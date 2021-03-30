@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "gsap": "^3.6.1",
     "parcel-bundler": "^1.12.5",
-    "prettier": "^2.2.1",
-    "svelte": "^3.36.0"
+    "prettier": "^2.2.1"
   }
 }

@@ -1,7 +1,5 @@
 import gsap, { TimelineMax } from "gsap";
-
 import { TextPlugin, ScrollTrigger } from "gsap/all";
-import { onMount } from "svelte";
 // Webpack treeshaking fix
 const plugins = [TextPlugin, ScrollTrigger];
 
@@ -22,8 +20,6 @@ const text = [
   "In the Land of Mordor where the Shadows lie.",
 ];
 
-const getLine = (number) => document.getElementById(`line-${number + 1}`);
-
 const vh = window.innerHeight;
 const screenHeight = 2 * vh;
 const tl = new TimelineMax();
@@ -36,10 +32,6 @@ text.forEach((text, i) => {
   document.getElementById("frame").appendChild(line);
   line.setAttribute("id", `line-${i + 1}`);
 });
-console.log("_______ vh", vh);
-
-const blue = "rgba(0, 0, 255, 0.2)";
-const green = "color: rgba(0, 128, 0, 0.2);";
 
 tl.to("#line-1", {
   duration: 0,
@@ -165,7 +157,7 @@ tl.to("#line-1", {
     },
     color: "inherit",
     scale: 1,
-    transform: "translateY(0px)",
+    transform: "translate(0,0)",
   })
   .to("#line-4", {
     scrollTrigger: {
@@ -212,15 +204,7 @@ tl.to("#line-1", {
     },
     text: { value: text[7] },
   })
-  .to("#body", {
-    scrollTrigger: {
-      trigger: "body",
-      scrub: true,
-      start: `${7.5 * screenHeight}px`,
-      duration: 1,
-    },
-    scale: 200,
-  })
+
   // BACKGROUND
   .to("#body", {
     scrollTrigger: {

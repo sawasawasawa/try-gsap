@@ -3,8 +3,6 @@
     src: url("assets/RuneSlasher-axxVJ.otf") format("opentype");
 }
 
-
-
 #frame {
     font-family: runes;
     font-size: 1.4em;
@@ -12,11 +10,6 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*text-align: left*/
     padding-top: 200px;
     padding-left: 150px
 }
